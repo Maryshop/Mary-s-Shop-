@@ -1,0 +1,92 @@
+here<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Shop | شحن الجواهر</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><h1>✨ Mary's Shop ✨</h1></div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="shop.html" class="active"><i class="fas fa-gem"></i> الجواهر</a></li>
+                <li><a href="accounts.html"><i class="fas fa-user"></i> الحسابات</a></li>
+                <li><a href="services.html"><i class="fas fa-bolt"></i> الخدمات</a></li>
+                <li><a href="posts.html"><i class="fas fa-newspaper"></i> المنشورات</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn-login"><i class="fas fa-user"></i> دخول</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="shop-section">
+            <div class="container">
+                <h2 class="section-title">💎 شحن الجواهر 💎</h2>
+                
+                <div class="product-card">
+                    <div class="product-glow"></div>
+                    <div class="product-image">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>110 جوهرة</h3>
+                    <p class="price">السعر: <span>$2.99</span></p>
+                    
+                    <div class="payment-methods">
+                        <h4>طرق الدفع:</h4>
+                        <div class="payment-buttons">
+                            <button class="payment-btn paypal" data-method="paypal">
+                                <i class="fab fa-paypal"></i> PayPal
+                            </button>
+                            <button class="payment-btn binance" data-method="binance">
+                                <i class="fab fa-bitcoin"></i> Binance
+                            </button>
+                            <button class="payment-btn other" data-method="other">
+                                <i class="fas fa-credit-card"></i> طرق دفع أخرى
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="order-form" style="display: none;">
+                        <input type="text" id="player-id" placeholder="معرف اللاعب (ID)">
+                        <input type="text" id="player-name" placeholder="اسم اللاعب">
+                        <button id="confirm-payment" class="btn-primary">تأكيد الدفع</button>
+                    </div>
+
+                    <div id="timer-section" style="display: none;">
+                        <div class="timer">
+                            <div class="timer-circle">
+                                <span id="countdown">30</span>
+                                <small>ثانية</small>
+                            </div>
+                            <p>جاري معالجة طلبك...</p>
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+
+                    <div id="code-section" style="display: none;">
+                        <div class="code-card">
+                            <h4>✨ تم الدفع بنجاح ✨</h4>
+                            <p>كود الشحن الخاص بك:</p>
+                            <div class="code-display">
+                                <span id="delivery-code">XXXX-XXXX-XXXX</span>
+                                <button onclick="copyCode()"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <p class="note">يرجى حفظ الكود لاستخدامه</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/shop.js"></script>
+</body>
+</html>
