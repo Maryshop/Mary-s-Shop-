@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Shop | لوحة التحكم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><h1>✨ Mary's Shop - Admin ✨</h1></div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="admin.html" class="active"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="admin-section">
+            <div class="container">
+                <h2 class="section-title">🔐 لوحة التحكم 🔐</h2>
+                
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="posts">📰 إدارة المنشورات</button>
+                    <button class="tab-btn" data-tab="products">💎 إدارة المنتجات</button>
+                    <button class="tab-btn" data-tab="orders">📦 إدارة الطلبات</button>
+                </div>
+                
+                <!-- تبويب المنشورات -->
+                <div id="posts-tab" class="tab-content active">
+                    <div class="admin-card">
+                        <h3>➕ إضافة منشور جديد</h3>
+                        <form id="add-post-form">
+                            <input type="text" id="post-title" placeholder="عنوان المنشور" required>
+                            <textarea id="post-content" rows="4" placeholder="محتوى المنشور"></textarea>
+                            <div id="images-container">
+                                <div class="image-upload">
+                                    <input type="file" accept="image/*" class="post-image" multiple>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">نشر المنشور</button>
+                        </form>
+                    </div>
+                    
+                    <div class="admin-card">
+                        <h3>📋 المنشورات الحالية</h3>
+                        <div id="admin-posts-list"></div>
+                    </div>
+                </div>
+                
+                <!-- تبويب المنتجات -->
+                <div id="products-tab" class="tab-content">
+                    <div class="admin-card">
+                        <h3>💎 إدارة منتجات الجواهر</h3>
+                        <form id="add-product-form">
+                            <input type="text" id="product-name" placeholder="اسم المنتج" value="110 جوهرة">
+                            <input type="number" id="product-price" placeholder="السعر" value="2.99">
+                            <button type="submit" class="btn-primary">تحديث المنتج</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- تبويب الطلبات -->
+                <div id="orders-tab" class="tab-content">
+                    <div class="admin-card">
+                        <h3>📦 سجل الطلبات</h3>
+                        <div id="orders-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+  </html>
