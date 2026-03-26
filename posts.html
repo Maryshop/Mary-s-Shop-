@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Shop | المنشورات والعروض</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><h1>✨ Mary's Shop ✨</h1></div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="shop.html"><i class="fas fa-gem"></i> الجواهر</a></li>
+                <li><a href="accounts.html"><i class="fas fa-user"></i> الحسابات</a></li>
+                <li><a href="services.html"><i class="fas fa-bolt"></i> الخدمات</a></li>
+                <li><a href="posts.html" class="active"><i class="fas fa-newspaper"></i> المنشورات</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> تواصل</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn-login"><i class="fas fa-user"></i> دخول</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="posts-section">
+            <div class="container">
+                <h2 class="section-title">📰 آخر الأخبار والعروض 📰</h2>
+                
+                <div id="posts-container" class="posts-grid">
+                    <!-- المنشورات ستظهر هنا من localStorage -->
+                </div>
+
+                <div id="no-posts" class="info-box" style="display: none;">
+                    <i class="fas fa-info-circle"></i>
+                    <p>لا توجد منشورات حالياً. تابعنا للمزيد!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Mary's Shop - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/posts.js"></script>
+</body>
+</html>
